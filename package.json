@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "type": "module",
   "dependencies": {
     "@types/cors": "^2.8.19",
     "axios": "^1.11.0",

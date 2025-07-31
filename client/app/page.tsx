@@ -21,7 +21,7 @@ export default function Home() {
   const [data, setData] = useState<DailyData[]>([])
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/daily-averages')
+    fetch('https://david-chan-ho2-github-io.onrender.com/api/daily-averages')
       .then((res) => res.json())
       .then(setData)
   }, [])

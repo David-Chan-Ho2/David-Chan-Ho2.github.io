@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // Modern JS version compatible with Node 14+
+    "module": "CommonJS", // Node uses CommonJS modules
+    "outDir": "./dist", // Compiled JS output folder
+    "rootDir": "./src", // Your TS source files folder
+    "strict": true, // Enable strict type checking
+    "esModuleInterop": true, // Allows default import compatibility
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "sourceMap": true // Generate source maps for debugging,
+  },
+  "include": ["*.ts"],
+  "exclude": ["node_modules"]
+}

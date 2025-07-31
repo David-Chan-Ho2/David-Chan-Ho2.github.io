@@ -1,7 +1,7 @@
 import axios from "axios"
 import cors from "cors"
 import dotenv from "dotenv"
-import express from "express"
+import express, { Request, Response } from "express"
 
 // Access secret keys from .env file
 dotenv.config()
@@ -24,7 +24,7 @@ interface Feed {
 }
 
 // Get data 
-const getData = async (req, res) => {
+const getData = async (req: Request, res: Response) => {
     try {
         const { data } = await axios.get(`https://api.thingspeak.com/channels/${THINGSPEAK_CHANNEL_ID}/feeds.json?api_key=${THINGSPEAK_API_KEY}&results=8000`)
 
@@ -55,7 +55,7 @@ const getData = async (req, res) => {
         }))
 
         res.json(daily)
-    } catch (err) {
+    } catch (err: any) {
         res.status(500).json({ error: 'Failed to fetch or process data' })
     }
 }
